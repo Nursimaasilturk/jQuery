@@ -106,10 +106,10 @@ main .container .intro-content {
   height: 100%;
 }
 main .container .intro-content .content-header h1 {
-  color: rgb(82, 3, 82);
+  color: rgb(111, 6, 181);
 }
 main .container .intro-content .content-header h2 {
-  color: rgb(182, 12, 182);
+  color: rgb(142, 57, 199);
 }
 main .container .intro-content .content-text {
   font-size: 1.5rem;
@@ -237,14 +237,14 @@ main .container .intro-content .content-code {
 .intro-content #selectors .text-more button {
   width: 40%;
   height: 20%;
-  border: 2px solid indianred;
+  border: 2px solid rgb(138, 7, 225);
   border-radius: 0.7rem;
   background-color: var(--text-bg);
   font-size: 1rem;
-  color: indianred;
+  color: rgb(138, 7, 225);
 }
 .intro-content #selectors .text-more button:hover {
-  background-color: indianred;
+  background-color: rgb(138, 7, 225);
   color: #fff;
   transition: 0.4s;
 }
