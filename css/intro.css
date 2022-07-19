@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@100;200;400;800&family=Edu+SA+Beginner:wght@400;500;600;700&family=Poppins:wght@300&family=Ubuntu:wght@500&display=swap");
+/* Header */
+* {
+  font-family: "Edu SA Beginner", cursive;
+  --code-area: rgb(1, 1, 45);
+  --text-bg: rgb(245, 238, 248);
+  --code-area-color: rgb(0, 254, 254);
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  height: 13vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav {
+  width: 96%;
+  height: 80%;
+  background-color: rgb(220, 135, 95);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+nav .logo {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+nav .logo p {
+  margin: 2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+nav .content-items {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+header nav ul .item-header {
+  font-size: 1.3rem;
+  font-weight: 200;
+  width: 15%;
+  height: 35%;
+  padding: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+}
+header nav ul .item-header a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+header nav ul .item-header a p {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  color: rgb(50, 16, 8);
+}
+header nav ul .item-header a #intro {
+  background-color: #fff;
+  color: rgb(82, 37, 29);
+}
+header nav ul .item-header a p:hover {
+  background-color: #fff;
+  color: rgb(82, 37, 29);
+}
+/* Header */
+
+main {
+  width: 100%;
+  height: 80vh;
+  margin: auto 1rem auto 1rem;
+}
+main .container {
+  margin: 1rem;
+  width: 90%;
+  height: auto;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  background-color: rgb(235, 222, 240);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main .container .intro-content {
+  width: 100%;
+  height: 100%;
+}
+main .container .intro-content .content-header h1 {
+  color: rgb(82, 3, 82);
+}
+main .container .intro-content .content-header h2 {
+  color: rgb(182, 12, 182);
+}
+main .container .intro-content .content-text {
+  font-size: 1.5rem;
+}
+main .container .intro-content .content-code {
+  background-color: var(--text-bg);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0.7rem;
+}
+.intro-content .content-code .code-download {
+  width: 40%;
+  height: 20vw;
+  display: flex;
+  flex-direction: column;
+}
+.intro-content .content-code .code-download .code--area,
+.intro-content .content-code .code-cdn .code--area {
+  padding: 1rem;
+  width: 80%;
+  height: 50%;
+  background-color: var(--code-area);
+  border-radius: 0.7rem;
+  color: var(--code-area-color);
+}
+.intro-content .content-code .code-cdn {
+  width: 40%;
+  height: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.tags {
+  color: rgb(21, 0, 255);
+}
+.intro-content .content-desc {
+  background-color: var(--text-bg);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0.7rem;
+}
+.intro-content .content-desc .desc-syntax,
+.intro-content .content-desc .desc-func,
+.intro-content .content-desc .desc-shortFunc {
+  width: 30%;
+  height: 100%;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.intro-content .content-desc .desc-syntax .desc-box,
+.intro-content .content-desc .desc-func .desc-box,
+.intro-content .content-desc .desc-shortFunc .desc-box {
+  padding: 1rem;
+  margin-top: 0;
+  width: 80%;
+  height: 10vh;
+  background-color: var(--code-area);
+  border-radius: 0.7rem;
+  color: var(--code-area-color);
+}
+.intro-content .content-desc .desc-shortFunc .desc-box {
+  margin-top: 0;
+}
+.intro-content .content-desc .desc-syntax .desc-box #syntax {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.intro-content #selectors {
+  width: 100%;
+  height: 30vh;
+  background-color: var(--text-bg);
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.intro-content #selectors .text-selectors {
+  width: 50%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.intro-content #selectors .text-selectors .selector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 20%;
+  width: 60%;
+}
+.intro-content #selectors .text-selectors .selector.class .code-area,
+.intro-content #selectors .text-selectors .selector.id .code-area,
+.intro-content #selectors .text-selectors .selector.element .code-area,
+.intro-content #selectors .text-selectors .selector.descendant .code-area {
+  width: 13vh;
+  height: 90%;
+  background-color: var(--code-area);
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  color: var(--code-area-color);
+  padding: 0.2rem;
+}
+.intro-content #selectors .text-more {
+  width: 50%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro-content #selectors .text-more p {
+  font-size: 1.5rem;
+  width: 50%;
+  color: rgb(11, 16, 83);
+}
+.intro-content #selectors .text-more button {
+  width: 40%;
+  height: 20%;
+  border: 2px solid indianred;
+  border-radius: 0.7rem;
+  background-color: var(--text-bg);
+  font-size: 1rem;
+  color: indianred;
+}
+.intro-content #selectors .text-more button:hover {
+  background-color: indianred;
+  color: #fff;
+  transition: 0.4s;
+}
+.intro-content .information {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+  height: 10vh;
+  border-radius: 0.7rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: rgb(82, 3, 82);
+  background-color: var(--text-bg);
+}
