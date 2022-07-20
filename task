@@ -1,2 +1,8 @@
---> will do playing main page picture-text
---> neden sayflardaki navbarın background ını değiştiremiyorum.
+--> will do playing main page picture-text// home
+
+//effects
+-->effects sayfasına daha fazla bilgi için https://www.javatpoint.com/jquery-tutorial i-ziyaret edin yazısı yaz.
+-->effect açıklaması yaparken speen, easiing callback terşmlerini güzelcea açıkla.
+-->effects sayfasına stop(fonk yaz.)
+-->effect chaning ile ilgili bir tane örnek göster.
+//events
