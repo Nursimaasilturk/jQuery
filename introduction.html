@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <link rel="stylesheet" href="../css/intro.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav id="intro-navbar">
+        <div class="logo"><p>jQuery</p></div>
+        <div class="content-items">
+          <ul>
+            <li class="item-header">
+              <a href="../index.html"><p>HOME</p></a>
+            </li>
+            <li class="item-header">
+              <a href="#"><p id="intro">Introduction</p></a>
+            </li>
+            <li class="item-header">
+              <a href="./effects.html"><p>Effects</p></a>
+            </li>
+            <li class="item-header">
+              <a href="./events.html"><p>Events</p></a>
+            </li>
+            <li class="item-header">
+              <a href="./css_html.html"><p>CSS/HTML</p></a>
+            </li>
+            <li class="item-header">
+              <a href="./ajax.html"><p>AJAX</p></a>
+            </li>
+            <li class="item-header">
+              <a href="./dom.html"><p>DOM</p></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="intro-content">
+          <div class="content-header">
+            <h1>What is The jQuery?</h1>
+          </div>
+          <div class="content-text">
+            <p>
+              Jquery is a JS library that most common used in the world. With
+              jquery, you can do so many awesome things like animations, menu,
+              banners, logos etc. Moreover,these are just the beginning. Below
+              we have listed the things done with jquery.
+            </p>
+            <ul class="desc-jquery">
+              <li>HTML/DOM Manipulation</li>
+              <li>CSS Manipulation</li>
+              <li>AJAX</li>
+              <li>Event Handling</li>
+              <li>Animations,Effects</li>
+            </ul>
+            <p>
+              In addition to these, jquery is a great blessing for us in terms
+              of its small size, open source, cross-browser support and easy to
+              learn. Let's not talk too much and let's start coding!!!
+            </p>
+          </div>
+          <div class="content-header">
+            <h1>Let's Start DUDE</h1>
+          </div>
+          <div class="content-header">
+            <h2>Adding jQuery to your webpage</h2>
+          </div>
+          <div class="content-text">
+            <p>
+              You can apply jquery to your webpage by downloading jquery or
+              including from a CDN .
+            </p>
+          </div>
+          <div class="content-code">
+            <div class="code-download">
+              <p>
+                There are two version of jquery. You can download both version
+                from <a href="https://jquery.com/download/">jQuery.com</a>. The
+                jQuery library is a single JavaScript file, you can reference it
+                with HTML <span class="tags">&lt;script&gt;</span> tags inside
+                the <span class="tags">&lt;head&gt;</span> section.
+              </p>
+              <div class="code--area">
+                <p>&lt;head&gt;</p>
+                <p>&lt;script src="jquery-3.6.0.min.js"&gt;&lt;script&gt;"</p>
+                <p>&lt;head&gt;</p>
+              </div>
+            </div>
+            <div class="code-cdn">
+              <p>
+                If you don't want to download jquery, you can include it from
+                CDN.
+              </p>
+              <div class="code--area">
+                <p>&lt;head&gt;</p>
+                <p>
+                  &lt;script
+                  src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt;&lt;script&gt;"
+                </p>
+                <p>&lt;head&gt;</p>
+              </div>
+            </div>
+          </div>
+          <div class="content-header">
+            <h2>jQuery Syntax</h2>
+          </div>
+          <div class="content-desc">
+		    <div class="desc-syntax">
+				<div class="desc-box">
+					<p id="syntax">$(selector).action()</p>
+				</div>
+				<div class="desc-text">
+				<p>A <strong>$</strong> sign to define jQuery</p>
+				<p>A <strong>(selector)</strong> to "find" HTML elements</p>
+				<p>A <strong>action()</strong>to be performedon elements </p>
+			</div>
+			</div>
+		    <div class="desc-func">
+				<div class="desc-box">
+					$(document).ready(function(){
+						<br>
+						// jQuery methods go here...
+					  <br>
+					  });
+				</div>
+				<div class="desc-text">
+					<h3>The Document Ready Event</h3>
+					<p>This is to prevent any jQuery code from running before the document is finished loading (is ready).</p>
+				</div>
+			</div>
+		    <div class="desc-shortFunc">
+
+				<div class="desc-box">
+					$(function(){
+						<br>
+						// jQuery methods go here...
+					  <br>
+					  });
+				</div>
+				<div class="desc-text">
+
+					<p>This is shorter method for document ready event. </p>
+						<p>You should use this syntax due to be easier to understand than other.</p>
+				</div>
+			</div>
+          </div>
+		  <div class="content-header">
+			<h2>jQuery Selectors</h2>
+		  </div>
+		  <div class="content-text" id="selectors">
+			<div class="text-selectors">
+				<div class="selector class">
+					<div class="code-area">
+						$(".class")
+					</div>
+					<p>Class Selector</p>
+				</div>
+				<div class="selector id">
+					<div class="code-area">
+						$("#id")
+					</div>
+					<p>ID Selector</p>
+				</div>
+				<div class="selector element">
+					<div class="code-area">
+						$("element")
+					</div>
+					<p>Element Selector</p>
+				</div>
+				<div class="selector descendant">
+					<div class="code-area">
+						$(".class #id")
+					</div>
+					<p>Descendant Selector</p>
+				</div>
+			</div>
+			<div class="text-more">
+				<p>You can learn from below link more examples of jQuery selectors...</p>
+				<button id="intro-btn">Click it</button>
+			</div>
+		  </div>
+		  <div class="information">
+			<p>Also, you can add it into <span class="tags">&lt;head&gt;</span> section after you create your own jquery functions in a seperate js file.</p>
+		  </div>
+      </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+    <link rel="stylesheet" href="../css/eff.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav id="effects-navbar">
+        <div class="logo"><p>jQuery</p></div>
+        <div class="content-items">
+          <ul>
+            <li class="item-header">
+              <a href="../index.html"><p>HOME</p></a>
+            </li>
+            <li class="item-header">
+              <a href="./introduction.html"><p>Introduction</p></a>
+            </li>
+            <li class="item-header">
+              <a href="#"><p id="intro">Effects</p></a>
+            </li>
+            <li class="item-header">
+              <a href="./events.html"><p>Events</p></a>
+            </li>
+            <li class="item-header">
+              <a href="./css_html.html"><p>CSS/HTML</p></a>
+            </li>
+            <li class="item-header">
+              <a href="./ajax.html"><p>AJAX</p></a>
+            </li>
+            <li class="item-header">
+              <a href="./dom.html"><p>DOM</p></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="content">
+        <div class="content-header">
+          <h1>Effects</h1>
+        </div>
+        <div class="content-items">
+          <div class="content-item--header">
+            <h2>1. animate()</h2>
+            <p class="item-desc">
+              The jQuery animate() method is used to create custom animations.
+              <strong>$(selector).animate({params},speed,callback);</strong> The
+              required params parameter defines the CSS properties to be
+              animated. The optional speed parameter specifies the duration of
+              the effect. It can take the following values: "slow", "fast", or
+              milliseconds.The optional callback parameter is a function to be
+              executed after the animation completes.
+            </p>
+          </div>
+          <div class="content-item--code">
+            <div class="code-syntax">
+              <div class="syntax-code">
+                $(document).ready(function () { $("#anm-btn").click(function ()
+                { $("#animate-box").animate( {<br />
+                left: "50px",<br />
+                height: "toggle", }<br />, 1000, function () { <br />//
+                Animation complete. <br />
+                } ); }); });
+              </div>
+              <div class="syntax-example">
+                <p>
+                  You can see the function by clicking below button! If you want
+                  to see function again beginning, you shoud refresh the page.
+                </p>
+                <button id="anm-btn">.animate()</button>
+              </div>
+            </div>
+            <div class="code-action">
+              <div id="animate-box">animate</div>
+            </div>
+          </div>
+        </div>
+        <div class="content-items">
+          <div class="content-item--header">
+            <h2>2. hide()</h2>
+            <p class="item-desc">
+              The jQuery hide() method is used to hide the selected elements.
+              <strong>
+                <br />$(selector).hide();<br />
+                $(selector).hide(speed, callback); <br />
+                $(selector).hide(speed, easing, callback);
+              </strong>
+            </p>
+          </div>
+          <div class="content-item--code">
+            <div class="code-syntax">
+              <div class="syntax-code">
+                $("#hide-btn").click(function () {<br />
+                $("#hide-box").hide();<br />
+                });
+              </div>
+              <div class="syntax-example">
+                <p>
+                  You can see the function by clicking below button! If you want
+                  to see function again beginning, you shoud refresh the page.
+                </p>
+                <button id="hide-btn">.hide()</button>
+              </div>
+            </div>
+            <div class="code-action">
+              <div id="hide-box">hide</div>
+            </div>
+          </div>
+        </div>
+        <div class="content-items">
+          <div class="content-item--header">
+            <h2>3. show()</h2>
+            <p class="item-desc">
+              The jQuery show() method is used to show the selected
+              elements.<strong>
+                <br />$(selector).show();<br />
+                $(selector).show(speed, callback); <br />
+                $(selector).show(speed, easing, callback);
+              </strong>
+            </p>
+          </div>
+          <div class="content-item--code">
+            <div class="code-syntax">
+              <div class="syntax-code">
+                const showBox = document.querySelector("#show-box");<br />
+                showBox.style.display = "none";<br />
+                <hr />
+                <br />$("#show-btn").click(function () {<br />
+                $("#show-box").show();<br />
+                });
+              </div>
+              <div class="syntax-example">
+                <p>
+                  You can see the function by clicking below button! If you want
+                  to see function again beginning, you shoud refresh the page.
+                </p>
+                <button id="show-btn">.show()</button>
+              </div>
+            </div>
+            <div class="code-action">
+              <div id="show-box">show</div>
+            </div>
+          </div>
+        </div>
+        <div class="content-items">
+          <div class="content-item--header">
+            <h2>4. toggle()</h2>
+            <p class="item-desc">
+              The jQuery toggle() is a special type of method which is used to
+              toggle between the hide() and show() method. It shows the hidden
+              elements and hides the shown element.
+              <strong>
+                <br />$(selector).toggle(); <br />$(selector).toggle(speed,
+                callback); <br />$(selector).toggle(speed, easing, callback);
+                <br />$(selector).toggle(display);
+              </strong>
+            </p>
+          </div>
+          <div class="content-item--code">
+            <div class="code-syntax">
+              <div class="syntax-code">
+                $("#toggle-btn").click(function () {<br />
+                $("#toggle-box").toggle(1000);<br />
+                });
+              </div>
+              <div class="syntax-example">
+                <p>
+                  You can see the function by clicking below button! If you want
+                  to see function again beginning, you shoud refresh the page.
+                </p>
+                <button id="toggle-btn">.toggle()</button>
+              </div>
+            </div>
+            <div class="code-action">
+              <div id="toggle-box">toggle</div>
+            </div>
+          </div>
+        </div>
+        <div class="content-items">
+          <div class="content-item--header">
+            <h2>5. fadeIn()</h2>
+            <p class="item-desc">
+              jQuery fadeIn() method is used to fade in the element.
+              <strong>
+                <br />$(selector).fadein();<br />
+                $(selector).fadeIn(speed,callback);
+                <br />$(selector).fadeIn(speed, easing, callback);
+              </strong>
+            </p>
+          </div>
+          <div class="content-item--code">
+            <div class="code-syntax">
+              <div class="syntax-code">
+                const fadeInBox = document.querySelector("#fadeIn-box");<br />
+                fadeInBox.style.display = "none";<br />
+                <hr />
+                $("#fadeIn-btn").click(function () {<br />
+                $("#fadeIn-box").fadeIn(3000);<br />
+                });
+              </div>
+              <div class="syntax-example">
+                <p>
+                  You can see the function by clicking below button! If you want
+                  to see function again beginning, you shoud refresh the page.
+                </p>
+                <button id="fadeIn-btn">.fadeIn()</button>
+              </div>
+            </div>
+            <div class="code-action">
+              <div id="fadeIn-box">fadeIn</div>
+            </div>
+          </div>
+        </div>
+        <div class="content-items">
+          <div class="content-item--header">
+            <h2>6. fadeOut()</h2>
+            <p class="item-desc">
+              The jQuery fadeOut() method is used to fade out the
+              element.<strong>
+                <br />$(selector).fadeOut();<br />
+                $(selector).fadeOut(speed,callback);
+                <br />$(selector).fadeOut(speed, easing, callback);
+              </strong>
+            </p>
+          </div>
+          <div class="content-item--code">
+            <div class="code-syntax">
+              <div class="syntax-code">
+                $("#fadeOut-btn").click(function () {<br />
+                $("#fadeOut-box").fadeOut(5000);<br />
+                });
+              </div>
+              <div class="syntax-example">
+                <p>
+                  You can see the function by clicking below button! If you want
+                  to see function again beginning, you shoud refresh the page.
+                </p>
+                <button id="fadeOut-btn">.fadeOut()</button>
+              </div>
+            </div>
+            <div class="code-action">
+              <div id="fadeOut-box">fadeOut</div>
+            </div>
+          </div>
+        </div>
+        <div class="content-items">
+          <div class="content-item--header">
+            <h2>7. fadeToggle()</h2>
+            <p class="item-desc">
+              jQuery fadeToggle() method is used to toggle between the fadeIn()
+              and fadeOut() methods. If the elements are faded in, it will make
+              them faded out and if they are faded out it will make them faded
+              in.<strong>
+                <br />$(selector).fadeToggle();<br />
+                $(selector).fadeToggle()(speed,callback);
+                <br />$(selector).fadeToggle()(speed, easing, callback);
+              </strong>
+            </p>
+          </div>
+          <div class="content-item--code">
+            <div class="code-syntax">
+              <div class="syntax-code">
+                $("#fadeToggle-btn").click(function () {<br />
+                $("#fadeToggle-box").fadeToggle(1000);<br />
+                });
+              </div>
+              <div class="syntax-example">
+                <p>
+                  You can see the function by clicking below button! If you want
+                  to see function again beginning, you shoud refresh the page.
+                </p>
+                <button id="fadeToggle-btn">.fadeToggle()</button>
+              </div>
+            </div>
+            <div class="code-action">
+              <div id="fadeToggle-box">fadeToggle</div>
+            </div>
+          </div>
+        </div>
+        <div class="content-items">
+          <div class="content-item--header">
+            <h2>8. fadeTo()</h2>
+            <p class="item-desc">
+              jQuery fadeTo() method is used to fading to a given opacity.
+              <strong
+                ><br />$(selector).fadeTo(speed, opacity);
+                <br />$(selector).fadeTo(speed, opacity, callback);
+                <br />$(selector).fadeTo(speed, opacity, easing, callback);
+              </strong>
+            </p>
+          </div>
+          <div class="content-item--code">
+            <div class="code-syntax">
+              <div class="syntax-code">
+                $("#fadeTo-btn").click(function () {<br />
+                $("#fadeTo-box").fadeTo(1000, 0.2);<br />
+                $("#fadeTo-box").fadeTo(1000, 0.9);<br />
+                });
+              </div>
+              <div class="syntax-example">
+                <p>
+                  You can see the function by clicking below button! If you want
+                  to see function again beginning, you shoud refresh the page.
+                </p>
+                <button id="fadeTo-btn">.fadeTo()</button>
+              </div>
+            </div>
+            <div class="code-action">
+              <div id="fadeTo-box">fadeTo</div>
+            </div>
+          </div>
+        </div>
+        <div class="content-items">
+          <div class="content-item--header">
+            <h2>9. slideDown()</h2>
+            <p class="item-desc">
+              jQuery slideDown() method is used to slide down an element.
+              <strong>
+                <br />$(selector).slideDown(speed);
+                <br />$(selector).slideDown(speed, callback);
+                <br />$(selector).slideDown(speed, easing, callback);
+              </strong>
+            </p>
+          </div>
+          <div class="content-item--code">
+            <div class="code-syntax">
+              <div class="syntax-code">
+                const slideDownBox =
+                document.querySelector("#slideDown-box");<br />
+                slideDownBox.style.display = "none";<br />
+                <hr />
+                $("#slideDown-btn").click(function () {<br />
+                $("#slideDown-box").slideDown(1000);<br />
+                });
+              </div>
+              <div class="syntax-example">
+                <p>
+                  You can see the function by clicking below button! If you want
+                  to see function again beginning, you shoud refresh the page.
+                </p>
+                <button id="slideDown-btn">.slideDown()</button>
+              </div>
+            </div>
+            <div class="code-action">
+              <div id="slideDown-box">slideDown</div>
+            </div>
+          </div>
+        </div>
+        <div class="content-items">
+          <div class="content-item--header">
+            <h2>10. slideUp()</h2>
+            <p class="item-desc">
+              jQuery slideDown() method is used to slide up an element.
+              <strong
+                ><br />$(selector).slideUp(speed);
+                <br />$(selector).slideUp(speed, callback);
+                <br />$(selector).slideUp(speed, easing, callback);
+              </strong>
+            </p>
+          </div>
+          <div class="content-item--code">
+            <div class="code-syntax">
+              <div class="syntax-code">
+                $("#slideUp-btn").click(function () {<br />
+                $("#slideUp-box").slideUp(1000);<br />
+                });
+              </div>
+              <div class="syntax-example">
+                <p>
+                  You can see the function by clicking below button! If you want
+                  to see function again beginning, you shoud refresh the page.
+                </p>
+                <button id="slideUp-btn">.slideUp()</button>
+              </div>
+            </div>
+            <div class="code-action">
+              <div id="slideUp-box">slideUp</div>
+            </div>
+          </div>
+        </div>
+        <div class="content-items">
+          <div class="content-item--header">
+            <h2>11. slideToggle()</h2>
+            <p class="item-desc">
+              jQuery slideToggle () method is used to toggle between slideUp()
+              and slideDown() method. If the element is slide down, it will
+              slide up the element and if it is slide up, it will slide down.
+              <strong
+                ><br />$(selector).slideToggle(speed);
+                <br />$(selector).slideToggle(speed, callback);
+                <br />$(selector).slideToggle(speed, easing, callback);
+              </strong>
+            </p>
+          </div>
+          <div class="content-item--code">
+            <div class="code-syntax">
+              <div class="syntax-code">
+                $("#slideToggle-btn").click(function () { <br />
+                $("#slideToggle-box").slideToggle(1000);<br />
+                });
+              </div>
+              <div class="syntax-example">
+                <p>
+                  You can see the function by clicking below button! If you want
+                  to see function again beginning, you shoud refresh the page.
+                </p>
+                <button id="slideToggle-btn">.slideToggle()</button>
+              </div>
+            </div>
+            <div class="code-action">
+              <div id="slideToggle-box">slideToggle</div>
+            </div>
+          </div>
+        </div>
+        <div class="content-items">
+          <div class="content-item--header">
+            <h2>12. delay()</h2>
+            <p class="item-desc">
+              The jQuery delay() method is used to delay the execution of
+              functions in the queue. It is a best method to make a delay
+              between the queued jQuery effects. The jQUery delay () method sets
+              a timer to delay the execution of the next item in the queue.
+              <strong><br />$(selector).delay (speed, queueName) </strong>
+            </p>
+          </div>
+          <div class="content-item--code">
+            <div class="code-syntax">
+              <div class="syntax-code">
+                $("#delay-btn").click(function () {<br />
+                $("#delay-box").delay(1000).fadeToggle(2000);<br />
+                });
+              </div>
+              <div class="syntax-example">
+                <p>
+                  You can see the function by clicking below button! If you want
+                  to see function again beginning, you shoud refresh the page.
+                </p>
+                <button id="delay-btn">.delay()</button>
+              </div>
+            </div>
+            <div class="code-action">
+              <div id="delay-box">delay</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../js/effect.js"></script>
+  </body>
+</html>
