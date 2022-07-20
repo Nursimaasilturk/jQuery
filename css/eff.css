@@ -97,17 +97,26 @@ main .content {
   height: auto;
   padding: 2rem;
   border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
   background-color: var(--content-bg);
+}
+main .content .content-header h1 {
+  color: rgb(39, 162, 223);
 }
 .content .content-items {
   margin: 1rem;
+  margin-top: 2rem;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
 }
 .content .content-items .content-item--header {
   margin: 0.5rem;
+}
+.content .content-items .content-item--header h2 {
+  color: rgb(10, 25, 156);
 }
 .content .content-items .content-item--code {
   margin: 1rem;
@@ -157,7 +166,73 @@ main .content {
   .content-item--code
   .code-syntax
   .syntax-example
-  #anm-btn {
+  #anm-btn,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #hide-btn,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #show-btn,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #toggle-btn,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #fadeIn-btn,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #fadeOut-btn,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #fadeToggle-btn,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #fadeTo-btn,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #slideDown-btn,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #slideUp-btn,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #slideToggle-btn,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #delay-btn {
   width: 80%;
   height: 4vh;
   border: none;
@@ -171,11 +246,88 @@ main .content {
   .content-item--code
   .code-syntax
   .syntax-example
-  #anm-btn:hover {
+  #anm-btn:hover,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #hide-btn:hover,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #show-btn:hover,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #toggle-btn:hover,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #fadeIn-btn:hover,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #fadeOut-btn:hover,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #fadeToggle-btn:hover,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #fadeTo-btn:hover,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #slideDown-btn:hover,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #slideUp-btn:hover,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #slideToggle-btn:hover,
+.content
+  .content-items
+  .content-item--code
+  .code-syntax
+  .syntax-example
+  #delay-btn:hover {
   background-color: var(--code-area);
   transition: 0.4s;
 }
-.content .content-items .content-item--code .code-action #animate-box {
+.content .content-items .content-item--code .code-action #animate-box,
+.content .content-items .content-item--code .code-action #hide-box,
+.content .content-items .content-item--code .code-action #show-box,
+.content .content-items .content-item--code .code-action #toggle-box,
+.content .content-items .content-item--code .code-action #fadeIn-box,
+.content .content-items .content-item--code .code-action #fadeOut-box,
+.content .content-items .content-item--code .code-action #fadeToggle-box,
+.content .content-items .content-item--code .code-action #fadeTo-box,
+.content .content-items .content-item--code .code-action #slideDown-box,
+.content .content-items .content-item--code .code-action #slideUp-box,
+.content .content-items .content-item--code .code-action #slideToggle-box,
+.content .content-items .content-item--code .code-action #delay-box {
   position: absolute;
   margin: 2rem;
   width: 40%;
