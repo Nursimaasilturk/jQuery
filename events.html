@@ -5,11 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jQuery</title>
-    <link rel="stylesheet" href="../css/event.css" />
+    <link rel="stylesheet" href="./css/event.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
+</link>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/theme/night.min.css"
+    />
+
   </head>
   <body>
     <header>
@@ -18,7 +28,7 @@
         <div class="content-items">
           <ul>
             <li class="item-header">
-              <a href="../index.html"><p>HOME</p></a>
+              <a href="./index.html"><p>HOME</p></a>
             </li>
             <li class="item-header">
               <a href="./introduction.html"><p>Introduction</p></a>
@@ -42,6 +52,244 @@
         </div>
       </nav>
     </header>
-    <script src="../js/event.js"></script>
+    <main>
+      <div class="content">
+        <div class="content-header">
+          <h1>Events</h1>
+          <h2>What Are The Events?</h2>
+          <p>
+            All the different visitors' actions that a web page can respond to
+            are called events. An event represents the precise moment when
+            something happens. Examples: moving a mouse over an element,
+            selecting a radio button,clicking on an element...
+          </p>
+          <div class="content-event-table">
+            <div class="table--header">
+              <p>EVENTS</p>
+            </div>
+            <div class="table--items">
+              <ul class="item">
+                <li>Browser Events</li>
+                <li>Document Loading</li>
+                <li>Form Events</li>
+                <li>Keyboard Events</li>
+                <li>Mouse Events</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="content-items" id="browser">
+          <div class="item--header">
+            <h2>Browser Events</h2>
+          </div>
+          <div class="item--desc">
+            <div class="desc--element">
+              <h3>.resize() Method</h3>
+              <p>The jQuery resize() method triggers a resize event when the size of the browser window changes. It binds the event handler to resize an event or trigger that event on an element. This method can be used to perform some required actions such as avoiding scrollbars when adjusting the elements of the page on window resize, and many more.</p>
+              <div class="element-codes">
+                <textarea  id="resize">$(window).resize(function () {
+                  var wresult = "Width = " + $(window).width();
+                  var hresult = "Height = " + $(window).height();
+                  $("#width").html(wresult);
+                  $("#height").html(hresult);
+                });</textarea>
+                <div class="code-example">
+                  <p>Please,try to resize your browser's window</p>
+                  <div class="code-sizes">
+                    <div class="box"><p id="width"></p></div>
+                    <div class="box"><p id="height"></p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="desc--element" id="scroll">
+              <h3>.scroll() Method</h3>
+              <p>The scroll() method is used to trigger the scroll event or attach a function to run when scrolling occurs.
+                The scroll event occurs when a scrollbar is used for an element. The event is triggered when the user moves the scrollbar up or down. We can use the CSS overflow property for creating a scrollbar. The scroll event fires for window objects or for all scrollable elements</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example"> flskndlfslnd</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-items" id="document">
+          <div class="item--header">
+            <h2>Document Loading</h2>
+          </div>
+          <div class="item--desc">
+            <div class="desc--element" id="load">
+              <h3>.load() Method</h3>
+              <p>The load () method is used to load a specific element. It attaches an event handler to load event. It was deprecated in jQuery 1.8 version of jQuery library.
+                The load event occurs when a specific element is loaded. It is generally used with a URL (image, script, frame, iframe), and the window object.</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example">flskndlfslnd</div>
+              </div>
+            </div>
+            <div class="desc--element" id="unload">
+              <h3>.unload() Method</h3>
+              <p>The jQuery unload() method is used to unload a specific element. It attaches an event handler to unload event. The unload event is sent to the window element when the user navigates away from the page. It was deprecated in jQuery 1.8 version of jQuery library.An unload event is triggered if you:Click on a link which leads to leave the page,use the forward or back button,type a new URL in the address bar,close the browser window,reload the page.</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example">flskndlfslnd</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-items" id="form">
+          <div class="item--header">
+            <h2>Form Events</h2>
+          </div>
+          <div class="item--desc">
+            <div class="desc--element" id="blur">
+              <h3>.blur() Method</h3>
+              <p>The jQuery blur event occurs when element loses focus. It can be generated by via keyboard commands like tab key or mouse click anywhere on the page.
+                It makes you enable to attach a function to the event that will be executed when the element loses focus. Originally, this event was used only with form elements like <input>. In latest browsers, it has been extended to include all element type</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example">flskndlfslnd</div>
+              </div>
+            </div>
+            <div class="desc--element" id="change">
+              <h3>.change() Method</h3>
+              <p>jQuery change event occurs when the value of an element is changed. It works only on form fields. When the change event occurs, the change () method attaches a function with it to run.
+                Note: This event is limited to 'input' elements, 'textarea' boxes and 'select' elements.</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example">flskndlfslnd</div>
+              </div>
+            </div>
+            <div class="desc--element" id="focus">
+              <h3>.focus() Method</h3>
+              <p>The jQuery focus event occurs when an element gains focus. It is generated by a mouse click or by navigating to it.
+
+                This event is implicitly used to limited sets of elements such as form elements like 'input', 'select' etc. and links 'a href'. The focused elements are usually highlighted in some way by the browsers.
+                
+                The focus method is often used together with blur () method.</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example">flskndlfslnd</div>
+              </div>
+            </div>
+            <div class="desc--element" id="submit">
+              <h3>.submit() Method</h3>
+              <p>jQuery submit event is sent to the element when the user attempts to submit a form.
+
+                This event is only attached to the 'form' element. Forms can be submitted either by clicking on the submit button or by pressing the enter button on the keyboard when that certain form elements have focus. When the submit event occurs, the submit() method attaches a function with it to run.</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example">flskndlfslnd</div>
+              </div>
+            </div>
+            <div class="desc--element" id="select">
+              <h3>.select() Method</h3>
+              <p>jQuery select event occurs when a text is marked or selected in text area or a text field. This event is limited to 'input type="text"' fields and 'textarea' boxes. When the select event occurs, the select() method attaches a function to run.</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example">flskndlfslnd</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-items" id="keyboard">
+          <div class="item--header">
+            <h2>Keyboard Events</h2>
+          </div>
+          <div class="item--desc">
+            <div class="desc--element" id="keypress">
+              <h3>.keypress() Method</h3>
+              <p>The jQuery keypress () event is occurred when a keyboard button is pressed down. This event is similar to keydown() event. The keypress() method is executed or attach a function to run when a keypress() event occurs.</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example">flskndlfslnd</div>
+              </div>
+            </div>
+            <div class="desc--element" id="keydown">
+              <h3>.keydown() Method</h3>
+              <p>When you press a key on the keyboard, the keydown() event is occurred and once the keydown() event is occurred, it executes the function associated with keydown() method to run.
+
+                The keydown() event is generally used with two other events.</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example">flskndlfslnd</div>
+              </div>
+            </div>
+            <div class="desc--element" id="keyup">
+              <h3>.keyup() Method</h3>
+              <p>The jQuery keyup() event occurs when a keyboard button is released after pressing. This method is executed or attach a function to run when a keyup() event occurs.</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example">flskndlfslnd</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-items" id="mouse">
+          <div class="item--header">
+            <h2>Mouse Events</h2>
+          </div>
+          <div class="item--desc">
+            <div class="desc--element" id="click">
+              <h3>.click() Method</h3>
+              <p>When you click on an element, the click event occurs and once the click event occurs it execute the click () method or attaches a function to run.</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example">flskndlfslnd</div>
+              </div>
+            </div>
+            <div class="desc--element" id="dblclick">
+              <h3>.dblclick() Method</h3>
+              <p>The dblclick() method is used to trigger a dblclick event or attach a function to execute on double-clicking the element. The event occurs when an element is clicked twice in a very short span of time. It is an inbuilt method in jQuery.</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example">flskndlfslnd</div>
+              </div>
+            </div>
+            <div class="desc--element" id="hover">
+              <h3>.hover() Method</h3>
+              <p>The jQuery hover() method executes two functions when you roam the mouse pointer over the selected element. The hover() method triggers both the mouseenter and mouseleave events.</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example">flskndlfslnd</div>
+              </div>
+            </div>
+            <div class="desc--element" id="mouseenter">
+              <h3>.mouseenter() Method</h3>
+              <p>The mouseenter() method adds an event handler function to an HTML element. This function is executed, when the mouse pointer enters the HTML element.
+
+                When you enter your mouse cursor over the selected element, it triggers the mouseenter event and once the mouseenter event is occurred, it executes the mouseenter() method to attach the event handler function to run.
+                
+                This event is generally used together with mouseleave() event.</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example">flskndlfslnd</div>
+              </div>
+            </div>
+            <div class="desc--element" id="mouseleave">
+              <h3>.mouseleave() Method</h3>
+              <p>The mouseleave() method adds an event handler function to an HTML element. This function is executed, when the mouse pointer leaves the HTML element.
+
+                When your mouse cursor leaves the selected element, it triggers the mouseleave event and once the mouseleave event is occurred, it executes the mouseleave() method attached with the event handler function to run.</p>
+              <div class="element-codes">
+                <div class="code-syntax"></div>
+                <div class="code-example">flskndlfslnd</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/javascript/javascript.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/hint/javascript-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/edit/closebrackets.min.js"></script>
+    <script src="./js/event.js"></script>
   </body>
 </html>
