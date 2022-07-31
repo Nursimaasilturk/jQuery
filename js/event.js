@@ -1,6 +1,6 @@
 const eventsHome = document.querySelector("#event-navbar");
 eventsHome.style.backgroundColor = "rgb(121, 252, 208)";
-CodeMirror.fromTextArea(document.getElementById("resize"), {
+CodeMirror.fromTextArea(document.getElementById("editor"), {
   lineNumbers: true,
   tabSize: 2,
   mode: "javascript",
